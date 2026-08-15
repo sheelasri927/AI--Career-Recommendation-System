@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Recommendation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 AI Career Recommendation System</h1>
+
+        <p>
+    Discover the right career based on your education, interests,
+    and skills — with personalized guidance, skill suggestions,
+    projects, and an AI Career Assistant.
+</p>
+
+        <form action="/recommend" method="POST">
+
+            <label>🎓 Education</label>
+            <input
+                type="text"
+                name="education"
+                placeholder="Example: B.Tech AI & ML"
+                required
+            >
+
+            <label>💡 Your Interests</label>
+            <input
+                type="text"
+                name="interests"
+                placeholder="Example: Artificial Intelligence, Data Science"
+                required
+            >
+
+            <label>💻 Your Skills</label>
+            <input
+                type="text"
+                name="skills"
+                placeholder="Example: Python, Machine Learning, SQL"
+                required
+            >
+
+            <button type="submit">
+                🔍 Recommend My Career
+            </button>
+
+        </form>
+        <a href="/assistant" class="back-button">
+    🤖 Open AI Career Assistant
+</a>
+<a href="/project-details" class="back-button">
+    📋 Add Project Details
+</a>
+
+    </div>
+
+</body>
+</html>
