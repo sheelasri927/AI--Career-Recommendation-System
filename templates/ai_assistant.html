@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>AI Career Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 AI Career Assistant</h1>
+
+        <p>Ask questions about your career and learning path.</p>
+
+        <form action="/assistant" method="POST">
+
+            <label>💬 Your Question</label>
+
+            <textarea
+                name="question"
+                rows="5"
+                placeholder="Example: How can I become an AI Engineer?"
+                required></textarea>
+
+            <button type="submit">
+                🚀 Ask AI Assistant
+            </button>
+
+        </form>
+
+        {% if answer %}
+
+        <div class="result-box">
+
+            <h2>🤖 AI Assistant Response</h2>
+
+            <p>{{ answer }}</p>
+
+        </div>
+
+        {% endif %}
+
+        <a href="/" class="back-button">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>
