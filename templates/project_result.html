@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Project Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📋 Project Details</h1>
+
+        <div class="details">
+
+            <h3>Project Name</h3>
+            <p>{{ project_name }}</p>
+
+            <h3>When did you do it?</h3>
+            <p>{{ project_date }}</p>
+
+            <h3>What does the project do?</h3>
+            <p>{{ project_description }}</p>
+
+            <h3>Technologies Used</h3>
+            <p>{{ technologies }}</p>
+
+            <h3>Your Contribution</h3>
+            <p>{{ contribution }}</p>
+
+        </div>
+
+        <a href="/project-details" class="back-button">
+            ✏️ Edit Project Details
+        </a>
+
+        <a href="/" class="back-button">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>
