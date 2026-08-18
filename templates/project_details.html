@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Project Details</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📋 Project Details</h1>
+
+        <p>Enter your project information.</p>
+
+        <form action="/project-details" method="POST">
+
+            <label>Project Name</label>
+            <input
+                type="text"
+                name="project_name"
+                placeholder="Example: AI Career Recommendation System"
+                required
+            >
+
+            <label>When did you do it?</label>
+            <input
+                type="text"
+                name="project_date"
+                placeholder="Example: August 2026"
+                required
+            >
+
+            <label>What does the project do?</label>
+            <textarea
+                name="project_description"
+                rows="4"
+                placeholder="Explain what your project does in 1–2 lines."
+                required></textarea>
+
+            <label>Technologies Used</label>
+            <input
+                type="text"
+                name="technologies"
+                placeholder="Example: Python, Flask, HTML, CSS, JavaScript"
+                required
+            >
+
+            <label>Your Contribution</label>
+            <textarea
+                name="contribution"
+                rows="5"
+                placeholder="Mention 2–4 important things you worked on."
+                required></textarea>
+
+            <button type="submit">
+                💾 Save Project Details
+            </button>
+
+        </form>
+
+        <a href="/" class="back-button">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>
