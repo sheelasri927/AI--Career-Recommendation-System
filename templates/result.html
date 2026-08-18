@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Career Recommendation Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container result-container">
+
+        <h1>🎯 Your Career Recommendation</h1>
+
+        <div class="result-box">
+
+            <h2>{{ career }}</h2>
+
+            <p>
+                Based on the information you provided,
+                this career is recommended for you.
+            </p>
+
+        </div>
+
+        <div class="details">
+
+            <h3>🎓 Education</h3>
+            <p>{{ education }}</p>
+
+            <h3>💡 Your Interests</h3>
+            <p>{{ interests }}</p>
+
+            <h3>💻 Your Skills</h3>
+            <p>{{ skills }}</p>
+
+        </div>
+        <div class="details">
+
+    <h2>📌 Skills You Should Improve</h2>
+
+    <ul>
+        {% for skill in improvement_skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+<div class="details">
+
+    <h2>💡 Recommended Projects</h2>
+
+    <ul>
+        {% for project in projects %}
+            <li>{{ project }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+<div class="details">
+
+    <h2>📋 Project Details</h2>
+
+    <h3>Project Name</h3>
+    <p>AI Career Recommendation System</p>
+
+    <h3>When did you do it?</h3>
+    <p>August 2026</p>
+
+    <h3>What does the project do?</h3>
+    <p>
+        This system analyzes a user's education, interests, and skills
+        and recommends a suitable career path. It also provides
+        career-specific skill suggestions and project recommendations.
+    </p>
+
+    <h3>Technologies Used</h3>
+    <p>
+        Python, Flask, Pandas, Scikit-learn, HTML, CSS, JavaScript
+    </p>
+
+    <h3>Your Contribution</h3>
+    <ul>
+        <li>Developed the career recommendation logic.</li>
+        <li>Built the Flask backend and web interface.</li>
+        <li>Added career-specific skill and project suggestions.</li>
+        <li>Developed the AI Career Assistant feature.</li>
+    </ul>
+
+</div>
+
+
+    
+
+        <div class="roadmap">
+
+            <h2>📚 Recommended Learning Roadmap</h2>
+
+            <ul>
+                <li>Learn Python Programming</li>
+                <li>Learn Data Structures & Algorithms</li>
+                <li>Learn Machine Learning</li>
+                <li>Build Real-World Projects</li>
+                <li>Learn Cloud Technologies</li>
+                <li>Prepare for Technical Interviews</li>
+            </ul>
+
+        </div>
+
+        <a href="/" class="back-button">
+            🔄 Try Again
+        </a>
+
+    </div>
+
+</body>
+</html>
